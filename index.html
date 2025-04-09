@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision León</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon (2).ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand img {
+            width: 150px;
+        }
+        .navbar-nav .nav-link {
+            color: #12507a !important;
+        }
+        .hero {
+            background-color: #12507a;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            background-image: url('img/fondo.jpg'), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Imagen oscurecida */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .btn-primary {
+            background-color: #edd650;
+            border-color: #edd650;
+            color: #12507a;
+            font-weight: 600;
+            border-radius: 25px;
+            padding: 12px 30px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #c4a635;
+            border-color: #c4a635;
+        }
+        .section-title {
+            color: #12507a;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .bg-light {
+            background-color: #e0e0e0 !important;
+        }
+        .gallery .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .gallery img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto; /* Mantener la proporción de la imagen */
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: #12507a;
+            color: white;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .gallery .card {
+                margin-bottom: 15px;
+            }
+            .footer {
+                font-size: 1rem;
+                padding: 15px 0;
+            }
+            .btn-primary {
+                padding: 12px 40px; /* Asegurarse de que el botón se vea bien en móviles */
+            }
+        }
+        .hero {
+    position: relative;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Ajusta el valor de la opacidad entre 0 (transparente) y 1 (totalmente opaco) */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Sombra oscura para resaltar el texto */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Agrega sombra al texto */
+}
+
+.hero p {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Agrega sombra al texto */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <img src="img/logo.png" alt="Logo Vision León" class="img-fluid" style="max-width: 400px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funciona">Cómo Funciona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#descargar">Descargar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="hero text-center">
+        <div class="container">
+            <h1>Visualiza el Futuro de León con Realidad Aumentada</h1>
+            <p>Descubre cómo se verán los proyectos urbanos antes de que se construyan.</p>
+    
+            <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+                <a href="https://www.dropbox.com/scl/fo/mvpydwp1azyaen60gm7za/AFIvnCOSHYPycbNqfMnnP38?rlkey=f35ze3jzq94p26zx72lxpbafg&st=i6qwe3s1&dl=0" class="btn btn-primary" download>Descargar</a>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    <section id="sobre" class="container my-5 text-center" style="background-color: #12507a; color: white; padding: 50px 0;">
+        <h2 class="section-title" style="color: #edd650;">¿Qué es Vision León?</h2>
+        <p>Vision León te permite explorar proyectos urbanos en 3D usando realidad aumentada, fomentando la participación ciudadana.</p>
+     
+    </section>
+    
+    <section id="funciona" class="bg-light py-5 text-center">
+        <div class="container">
+            <h2 class="section-title">Cómo Funciona</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <img src="img/probando.jpeg" class="card-img-top" alt="Explora">
+                        <div class="card-body">
+                            <h4 class="card-title">Explora</h4>
+                            <p class="card-text">Visualiza proyectos en tu entorno con realidad aumentada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <img src="img/llendo.jpeg" class="card-img-top" alt="Interactúa">
+                        <div class="card-body">
+                            <h4 class="card-title">Interactúa</h4>
+                            <p class="card-text">Acércate y revisa cada detalle del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <img src="img/op.jpeg" class="card-img-top" alt="Opina">
+                        <div class="card-body">
+                            <h4 class="card-title">Opina</h4>
+                            <p class="card-text">Comparte tu opinión y participa en la toma de decisiones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="descargar" class="text-center py-5" style="background-color: #edd650; color: #12507a;">
+        <div class="container">
+            <h2>Descarga Vision León</h2>
+            <p>Disponible para Android</p>
+            <a href="https://www.dropbox.com/scl/fo/mvpydwp1azyaen60gm7za/AFIvnCOSHYPycbNqfMnnP38?rlkey=f35ze3jzq94p26zx72lxpbafg&st=i6qwe3s1&dl=0" class="btn btn-primary" download>Descargar</a>
+        </div>
+    </section>
+    
+    <footer class="footer text-center">
+        <p>&copy; 2025 Vision León | Todos los derechos reservados</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script>
+        function descargarArchivos() {
+            // Descargar imagen
+            const linkImagen = document.createElement('a');
+            linkImagen.href = 'img/marcador.jpg';
+            linkImagen.download = 'marcador.jpg';
+            document.body.appendChild(linkImagen);
+            linkImagen.click();
+            document.body.removeChild(linkImagen);
+        
+            // Descargar APK
+            const linkAPK = document.createElement('a');
+            linkAPK.href = 'apk/VisionLeon.apk';
+            linkAPK.download = 'VisionLeon.apk';
+            document.body.appendChild(linkAPK);
+            linkAPK.click();
+            document.body.removeChild(linkAPK);
+        }
+        </script>
+        
+        
+</body>
+</html>
